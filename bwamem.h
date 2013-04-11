@@ -16,6 +16,7 @@ typedef struct __smem_i smem_i;
 #define MEM_F_NOPAIRING 0x4
 #define MEM_F_ALL       0x8
 #define MEM_F_NO_MULTI  0x10
+#define MEM_F_NO_RESCUE 0x20
 
 typedef struct {
 	int a, b, q, r;         // match score, mismatch penalty and gap open/extension penalty. A gap of size k costs q+k*r
@@ -43,7 +44,8 @@ typedef struct {
 typedef struct {
 	int64_t rb, re; // [rb,re): reference sequence in the alignment
 	int qb, qe;     // [qb,qe): query sequence in the alignment
-	int score;      // best SW score
+	int score;      // best local SW score
+	int truesc;     // actual score corresponding to the aligned region; possibly smaller than $score
 	int sub;        // 2nd best SW score
 	int csub;       // SW score of a tandem hit
 	int sub_n;      // approximate number of suboptimal hits
@@ -59,19 +61,15 @@ typedef struct {
 	double avg, std;
 } mem_pestat_t;
 
-typedef struct { // TODO: This is an intermediate struct only. Better get rid of it.
-	int64_t rb, re;
-	int qb, qe, flag, qual;
-	// optional info
-	int score, sub;
-} bwahit_t;
-
 typedef struct { // This struct is only used for the convenience of API.
-	int rid;         // reference sequence index in bntseq_t
-	int pos;         // forward strand 5'-end mapping position
+	int64_t pos;     // forward strand 5'-end mapping position
+	int rid;         // reference sequence index in bntseq_t; <0 for unmapped
+	int flag;        // extra flag
 	uint32_t is_rev:1, mapq:8, NM:23; // is_rev: whether on the reverse strand; mapq: mapping quality; NM: edit distance
 	int n_cigar;     // number of CIGAR operations
 	uint32_t *cigar; // CIGAR in the BAM encoding: opLen<<4|op; op to integer mapping: MIDSH=>01234
+
+	int score, sub;
 } mem_aln_t;
 
 #ifdef __cplusplus
