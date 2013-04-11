@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+DEB_BUILD_ARCH := $(shell dpkg-architecture -qDEB_BUILD_ARCH)
+
+DFLAGS := -DHAVE_PTHREAD
+
+ifneq ($(DEB_BUILD_ARCH), amd64)
+	DFLAGS += -D_NO_SSE2
+endif
+
+override_dh_auto_build:
+	dh_auto_build -- CFLAGS="-Wall $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)" DFLAGS="$(DFLAGS)"
+	mv bwa bwa0.7.3a
+	cp bwa.1 bwa0.7.3a.2

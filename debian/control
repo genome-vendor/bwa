@@ -1,0 +1,23 @@
+Source: bwa0.7.3a
+Section: science
+Priority: optional
+Maintainer: Genome Developers <genome-dev@genome.wustl.edu>
+DM-Upload-Allowed: yes
+Uploaders: Genome Developers <genome-dev@genome.wustl.edu>
+Build-Depends: cdbs, debhelper (>= 7), zlib1g-dev
+Standards-Version: 3.9.1
+Homepage: http://bio-bwa.sourceforge.net/ 
+Vcs-Browser: http://svn.debian.org/viewsvn/debian-med/trunk/packages/bwa/trunk/
+Vcs-Svn: svn://svn.debian.org/svn/debian-med/trunk/packages/bwa/trunk/
+
+Package: bwa0.7.3a
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: samtools
+Description: Burrows-Wheeler Aligner
+ Burrows-Wheeler Aligner (BWA) is a program that aligns relatively short
+ nucleotide sequences against a long reference sequence such as the human
+ genome. It implements two algorithms, bwa-short and BWA-SW. The former works
+ for query sequences shorter than 200 bp and the latter for longer sequences up
+ to around 100 kbp. Both algorithms do gapped alignment. They are usually more
+ accurate and faster on queries with low error rates.

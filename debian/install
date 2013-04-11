@@ -1,0 +1,3 @@
+bwa0.7.3a	usr/bin
+# A different solid2fastq.pl script is present in the maq package.
+*.pl	usr/share/bwa0.7.3a

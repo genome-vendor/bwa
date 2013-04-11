@@ -1,0 +1,82 @@
+bwa0.7.3a (0.7.3a-2) UNRELEASED; urgency=low
+
+  * Release bwa-0.7.3a (0.7.3-r376-beta)
+
+ -- Scott Smith <ssmith@genome.wustl.edu>  Wed, 10 Apr 2013 11:41:37 -0500
+
+bwa0.7.3a (0.7.3a-1) UNRELEASED; urgency=low
+
+  * BROKEN: accidentally packaged the current master instead of 0.7.3a.
+  * Release bwa-0.7.3a (0.7.3-r376-beta)
+
+ -- Scott Smith <ssmith@genome.wustl.edu>  Wed, 10 Apr 2013 11:41:37 -0500
+
+bwa0.7.2 (0.7.2-1) UNRELEASED; urgency=low
+
+  * Release bwa-0.7.2-r351
+
+ -- Mark Burnett <mburnett@genome.wustl.edu>  Mon, 11 Mar 2013 16:41:37 -0500
+
+bwa0.6.2 (0.6.2-1tgi) unstable; urgency=low
+
+  * Imported Upstream version 0.6.2
+  * tgi-specific updates
+
+ -- APIPE Test User <apipe-tester@genome.wustl.edu>  Tue, 19 Feb 2013 14:20:59 -0600
+
+bwa (0.5.8c-1) unstable; urgency=low
+
+  * Bug fix release, reverting the scoring system back to the one used in
+    0.5.7. 0.5.8a/b may produce a CIGAR like 10M2I10M4D2M which should not
+    happen in principle. Such wrong cigars also incur errors in indel calling
+    when samtools is in use (Closes: #601568).
+  * Incremented Standards-Version to reflect conformance with Policy 3.9.1
+    (debian/control, no changes needed).
+  * debian/copyright updated and reformatted.
+
+ -- Charles Plessy <plessy@debian.org>  Wed, 27 Oct 2010 21:14:34 +0900
+
+bwa (0.5.8a-1) unstable; urgency=low
+
+  * New upstream release.
+  * Use the more convenient viewsvn as VCS-Broswer (debian/control).
+  * Incremented Standards-Version to reflect conformance with
+    Policy 3.9.0 (debian/control, no changes needed).
+
+ -- Charles Plessy <plessy@debian.org>  Wed, 30 Jun 2010 10:44:30 +0900
+
+bwa (0.5.7-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Charles Plessy <plessy@debian.org>  Tue, 02 Mar 2010 23:33:06 +0900
+
+bwa (0.5.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Incremented Standards-Version to reflect conformance with
+    Policy 3.8.4 (debian/control).
+
+ -- Charles Plessy <plessy@debian.org>  Wed, 17 Feb 2010 12:48:57 +0900
+
+bwa (0.5.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Using Dpkg source format version ‘3.0 (quilt)’ (debian/source/format).
+
+ -- Charles Plessy <plessy@debian.org>  Wed, 11 Nov 2009 23:05:19 +0900
+
+bwa (0.5.4-1) unstable; urgency=low
+
+  * New upstream release, see ‘/usr/share/doc/bwa/NEWS.gz’.
+  * Refreshed debian/copyright.
+  * Reflected the rename of dBWT-Sw to BWA-SW in the package's description
+    (debian/control).
+
+ -- Charles Plessy <plessy@debian.org>  Mon, 19 Oct 2009 13:59:42 +0900
+
+bwa (0.5.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #548719)
+
+ -- Charles Plessy <plessy@debian.org>  Thu, 08 Oct 2009 19:20:41 +0900
