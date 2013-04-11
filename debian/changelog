@@ -1,3 +1,9 @@
+bwa0.7.3a (0.7.3a-1) UNRELEASED; urgency=low
+
+  * Release bwa-0.7.3a (0.7.3-r376-beta)
+
+ -- Scott Smith <ssmith@genome.wustl.edu>  Wed, 10 Apr 2013 11:41:37 -0500
+
 bwa0.7.2 (0.7.2-1) UNRELEASED; urgency=low
 
   * Release bwa-0.7.2-r351
