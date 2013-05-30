@@ -3,7 +3,7 @@
 #include "utils.h"
 
 #ifndef PACKAGE_VERSION
-#define PACKAGE_VERSION "0.7.4-r389-beta"
+#define PACKAGE_VERSION "0.7.5-r404"
 #endif
 
 int bwa_fa2pac(int argc, char *argv[]);
@@ -55,7 +55,7 @@ static int usage()
 
 void bwa_print_sam_PG()
 {
-	printf("@PG\tID:bwa\tPN:bwa\tVN:%s\n", PACKAGE_VERSION);
+	err_printf("@PG\tID:bwa\tPN:bwa\tVN:%s\n", PACKAGE_VERSION);
 }
 
 int main(int argc, char *argv[])
