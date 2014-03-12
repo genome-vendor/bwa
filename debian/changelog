@@ -1,3 +1,9 @@
+bwa0.7.7 (0.7.7-1) UNRELEASED; urgency=low
+
+  * Release bwa-0.7.7
+
+ -- Feiyu Du <fdu@genome.wustl.edu>  Wed, 12 Mar 2014 13:09:37 -0500
+
 bwa0.7.5a (0.7.5a-1) UNRELEASED; urgency=low
 
   * Release bwa-0.7.5a
