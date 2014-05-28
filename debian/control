@@ -1,4 +1,4 @@
-Source: bwa0.7.9
+Source: bwa0.7.9a
 Section: science
 Priority: optional
 Maintainer: Genome Developers <genome-dev@genome.wustl.edu>
@@ -10,7 +10,7 @@ Homepage: http://bio-bwa.sourceforge.net/
 Vcs-Browser: http://svn.debian.org/viewsvn/debian-med/trunk/packages/bwa/trunk/
 Vcs-Svn: svn://svn.debian.org/svn/debian-med/trunk/packages/bwa/trunk/
 
-Package: bwa0.7.9
+Package: bwa0.7.9a
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Suggests: samtools
