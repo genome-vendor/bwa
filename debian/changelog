@@ -1,3 +1,9 @@
+bwa0.7.9 (0.7.9-1) UNRELEASED; urgency=low
+
+  * Release bwa-0.7.9
+
+ -- Ian Ferguson <iferguso@genome.wustl.edu>  Wed, 28 May 2014 16:22:30 -0500
+
 bwa0.7.8 (0.7.8-1) UNRELEASED; urgency=low
 
   * Release bwa-0.7.8
